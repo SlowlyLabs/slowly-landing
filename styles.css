@@ -1012,27 +1012,28 @@ a:hover { color: var(--sage); }
   position: relative;
   transform: rotate(-1.2deg);
   transition: transform var(--slow) var(--ease-out);
-}
-.founder__portrait:hover { transform: rotate(0deg); }
-
-.founder__portrait img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 6px;
   background: var(--paper);
-  padding: 12px 12px 56px 12px; /* polaroid border, heavier at the bottom */
+  padding: 12px;
+  border-radius: 6px;
   box-shadow:
     0 30px 60px rgba(0,0,0,0.55),
     0 2px 0 rgba(0,0,0,0.4),
     inset 0 1px 0 rgba(255,255,255,0.3);
+}
+.founder__portrait:hover { transform: rotate(0deg); }
+
+.founder__portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center 18%;
   filter: saturate(0.92) contrast(1.02);
 }
 
 .founder__cap {
-  position: absolute;
-  bottom: 18px;
-  left: 0; right: 0;
+  margin: 0;
+  padding: 18px 0 16px 0;
   text-align: center;
   font-family: var(--mono);
   font-size: 10.5px;
