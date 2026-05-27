@@ -1,0 +1,36 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <defs>
+    
+    <linearGradient id="tide-warm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE5B8"></stop>
+      <stop offset="50%" stop-color="#E8C575"></stop>
+      <stop offset="100%" stop-color="#A8823A"></stop>
+    </linearGradient>
+    
+    <linearGradient id="tide-lime" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7AB820"></stop>
+      <stop offset="50%" stop-color="#C8E85A"></stop>
+      <stop offset="100%" stop-color="#E8FF7A"></stop>
+    </linearGradient>
+    
+    <radialGradient id="tide-glow" cx="50%" cy="50%" r="42%">
+      <stop offset="0%" stop-color="#E8C575" stop-opacity="0.18"></stop>
+      <stop offset="60%" stop-color="#D4FF6B" stop-opacity="0.08"></stop>
+      <stop offset="100%" stop-color="#E8C575" stop-opacity="0"></stop>
+    </radialGradient>
+  </defs>
+
+  
+  <circle cx="120" cy="120" r="80" fill="url(#tide-glow)"></circle>
+
+  
+  <g transform="translate(120 120)" stroke-linecap="round" fill="none">
+    
+    <path d="M -52 -12 A 44 44 0 0 1 32 -32" stroke="url(#tide-warm)" stroke-width="22"></path>
+    
+    <path d="M 52 12 A 44 44 0 0 1 -32 32" stroke="url(#tide-lime)" stroke-width="22"></path>
+    
+    <path d="M 32 -32 Q 0 0 -32 32" stroke="#D4B26A" stroke-width="1.5" opacity="0.35"></path>
+  </g>
+</svg>

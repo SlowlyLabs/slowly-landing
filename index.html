@@ -1,510 +1,603 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Slowly · Wellness that doesn't shout.</title>
-<meta name="description" content="A coach in your pocket. A practice that lasts. Slowly is a calm, sustainable wellness app for India — one thing a day, no leaderboards, no shouting.">
-<link rel="icon" href="assets/favicon-tide.svg">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="landing.css">
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#111110" />
+
+  <title>Slowly — Don&rsquo;t quit. Just shrink it.</title>
+  <meta name="description" content="Workouts and meals that adapt to your worst days so you never have to quit. A capacity-first wellness app. Anti-streak, anti-shame, anti-transformation. Made slowly, in Bangalore." />
+
+  <link rel="canonical" href="https://slowly.app/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://slowly.app/" />
+  <meta property="og:title" content="Slowly — Don't quit. Just shrink it." />
+  <meta property="og:description" content="A capacity-first wellness app. No streaks, no scores, no red days. The plan shrinks to your week, and welcomes you back without shame." />
+  <meta property="og:image" content="https://slowly.app/assets/aperture-mark.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon-tide.svg" />
+  <link rel="apple-touch-icon" href="assets/aperture-mark.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-theme="split">
+<body>
+  <a class="skip-link" href="#hero">Skip to content</a>
 
-<!-- ── Top nav ───────────────────────────────────────────── -->
-<nav class="nav" id="nav">
-  <a class="nav-logo" href="#">
-    <svg viewBox="0 0 240 240" fill="none">
-      <defs>
-        <linearGradient id="g-top" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#FFE5B8"/><stop offset="60%" stop-color="#E8C575"/><stop offset="100%" stop-color="#A8823A"/></linearGradient>
-        <linearGradient id="g-bot" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7AB820"/><stop offset="60%" stop-color="#C8E85A"/><stop offset="100%" stop-color="#E8FF7A"/></linearGradient>
-      </defs>
-      <path d="M40 100 A80 80 0 0 1 200 100" stroke="url(#g-top)" stroke-width="22" stroke-linecap="round" fill="none"/>
-      <path d="M40 140 A80 80 0 0 0 200 140" stroke="url(#g-bot)" stroke-width="22" stroke-linecap="round" fill="none"/>
-    </svg>
-    <span>slowly.</span>
-  </a>
-  <div class="nav-links">
-    <a href="#why">Why</a>
-    <a href="#how">How it works</a>
-    <a href="#tour">The app</a>
-    <a href="#faq">FAQ</a>
-  </div>
-  <button class="nav-cta" onclick="document.getElementById('signup-input').focus()">Join waitlist</button>
-</nav>
+  <header class="page-header" role="banner">
+    <a href="/" class="brand" aria-label="Slowly, home">
+      <span class="brand__wordmark">slowly<span class="brand__period">.</span></span>
+    </a>
+    <nav class="page-nav" aria-label="Primary">
+      <a href="#engine">How it works</a>
+      <a href="#three-months">The letter</a>
+      <a href="#waitlist" class="nav-cta">Join the beta</a>
+    </nav>
+  </header>
 
-<!-- ── Hero ──────────────────────────────────────────────── -->
-<section class="hero">
-  <div class="hero-inner">
-    <div>
-      <span class="eyebrow"><span class="dot"></span> Joining the waitlist · India · 2026</span>
-      <h1 id="hero-h1">Slow training,<br><em>lasting</em> results.</h1>
-      <p class="hero-sub">Workouts and meals, done a little better every week. Slowly is built on the simple idea that the body you want isn't crash-built — it's earned, one slow rep and one slow meal at a time.</p>
+  <main id="content">
 
-      <form class="waitlist" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('input').placeholder='You\'re on the list ✓'; this.querySelector('button').textContent='Sent';">
-        <input id="signup-input" type="email" placeholder="you@example.com" required>
-        <button type="submit">Join waitlist</button>
-      </form>
-      <div class="waitlist-meta">
-        <span><span class="check">✓</span> Free during beta</span>
-        <span><span class="check">✓</span> India-first</span>
-        <span><span class="check">✓</span> No spam, ever</span>
-      </div>
-    </div>
-
-    <div class="phone-stack">
-      <!-- Side phone left: Recap -->
-      <div class="phone phone-2">
-        <div class="scr scr-recap">
-          <div class="ebrow">Sunday · Week 18</div>
-          <div class="head">A <em>quiet</em> kind<br>of week.</div>
-          <div class="sun-card"><div class="sun"></div></div>
-          <p>You said you wanted to feel <em>calmer</em>. This week, you did — on most mornings.</p>
-          <div class="bars">
-            <div class="bar" style="height:50%"></div>
-            <div class="bar hi" style="height:75%"></div>
-            <div class="bar" style="height:55%"></div>
-            <div class="bar hi" style="height:85%"></div>
-            <div class="bar hi" style="height:75%"></div>
-            <div class="bar" style="height:50%"></div>
-            <div class="bar hi" style="height:90%"></div>
-          </div>
-        </div>
+    <!-- ───────────────────────────────────────── HERO ────────────────────────── -->
+    <section id="hero" class="hero">
+      <div class="hero__meta" aria-hidden="true">
+        <span class="marg">§ 01 &nbsp;·&nbsp; Opening</span>
+        <span class="marg">v6 — beta</span>
       </div>
 
-      <!-- Center phone: Today -->
-      <div class="phone phone-1">
-        <div class="scr scr-today">
-          <div class="sentence">"I want to feel calmer."</div>
-          <div class="label">Today,</div>
-          <div class="verb">walk.</div>
-          <div class="coach">Twenty minutes, before screens. The mornings you do this, your evenings land softer.</div>
-          <div class="begin">Begin</div>
-          <div class="dots">
-            <span class="dot"></span><span class="dot"></span><span class="dot miss"></span>
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <span class="dot today"></span>
-          </div>
-        </div>
-      </div>
+      <h1 class="hero__line">
+        <span class="hero__don">Don&rsquo;t&nbsp;quit.</span>
+        <span class="hero__shrink">Just&nbsp;shrink&nbsp;it</span>
+      </h1>
 
-      <!-- Side phone right: You -->
-      <div class="phone phone-3">
-        <div class="scr scr-you">
-          <div class="sent">"I want to feel calmer."</div>
-          <div class="num num">127</div>
-          <div class="num-lbl">days kept</div>
-          <div class="story-lbl">Your story</div>
-          <div class="story">
-            <div class="story-row first"><span class="pin"></span><div><div class="d">Today</div><div class="t">Mood landed at 8 — highest in three weeks.</div></div></div>
-            <div class="story-row"><span class="pin"></span><div><div class="d">May 2</div><div class="t">Strong week — five sessions kept.</div></div></div>
-            <div class="story-row"><span class="pin"></span><div><div class="d">Apr 22</div><div class="t">Family of four joined your circle.</div></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Manifesto ─────────────────────────────────────────── -->
-<section class="cream" id="why">
-  <div class="section">
-    <div class="section-eyebrow">The promise</div>
-    <div class="manifesto">
-      <div>
-        <h2 class="section-title">Every other app is <em>shouting</em>. We don't.</h2>
-        <div class="manifesto-quote">A practice you keep beats a programme you quit. Slowly is built around what actually lasts: small daily acts, picked by a coach who knows you, in a tool that doesn't try to be a casino.</div>
-      </div>
-      <div class="manifesto-list">
-        <div class="manifesto-row"><div class="from">Instead of</div><div class="to"><span class="strike">streaks that reset</span> a count of days you've kept, that never resets.</div></div>
-        <div class="manifesto-row"><div class="from">Instead of</div><div class="to"><span class="strike">leaderboards</span> a circle of people who actually care how you slept.</div></div>
-        <div class="manifesto-row"><div class="from">Instead of</div><div class="to"><span class="strike">12-week programmes</span> one verb a day. Walk. Sleep early. Eat slowly.</div></div>
-        <div class="manifesto-row"><div class="from">Instead of</div><div class="to">a few quiet reactions — ❤️ 🔥 ✅ 🌱 👏. No leaderboard underneath.</div></div>
-        <div class="manifesto-row"><div class="from">Instead of</div><div class="to"><span class="strike">an identity quiz</span> a sentence you write yourself: <em style="font-family:var(--serif);font-style:italic;">"I want to feel ___."</em></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── How it works ─────────────────────────────────────── -->
-<section class="cream" id="how">
-  <div class="section" style="padding-top:0;">
-    <div class="section-eyebrow">How it works</div>
-    <h2 class="section-title">Three steps. <em>That's the product.</em></h2>
-    <div class="steps">
-      <div class="step">
-        <div class="n">01</div>
-        <h3>Write your sentence</h3>
-        <p>One question, one input. <em style="font-family:var(--serif);font-style:italic;">"How do you want to feel?"</em> Calmer. Stronger. Rested. Present. Your words become the app's compass.</p>
-      </div>
-      <div class="step">
-        <div class="n">02</div>
-        <h3>Open it once a day</h3>
-        <p>The coach gives you one verb. Walk. Sleep early. Eat slowly. One coach line, one button. The whole daily experience fits on one screen.</p>
-      </div>
-      <div class="step">
-        <div class="n">03</div>
-        <h3>Sundays, look back</h3>
-        <p>A weekly recap, written like a letter. <em style="font-family:var(--serif);font-style:italic;">"You said you wanted to feel calmer. This week, you did."</em> Then plan the next.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Live screen tour ──────────────────────────────────── -->
-<section class="tour" id="tour">
-  <div class="section">
-    <div class="section-eyebrow">Inside the app</div>
-    <h2 class="section-title">Three tabs. <em>One number.</em></h2>
-    <p class="section-lede">Today is the verb. Circle is family and close friends — no strangers, no metrics. You is one sentence, one number, your story. Everything else is the coach speaking.</p>
-
-    <div class="tour-grid">
-      <div class="tour-card">
-        <div class="phone-still">
-          <div class="scr scr-today">
-            <div class="sentence">"I want to feel rested."</div>
-            <div class="label">Today,</div>
-            <div class="verb" style="font-size:54px;">sleep<br>early.</div>
-            <div class="coach">By 10:30. Lights low, screens away. Your Tuesdays are your hardest day — protect tomorrow tonight.</div>
-            <div class="begin">Set wind-down</div>
-            <div class="dots">
-              <span class="dot"></span><span class="dot today"></span><span class="dot miss"></span><span class="dot miss"></span><span class="dot miss"></span><span class="dot miss"></span><span class="dot miss"></span>
-            </div>
-          </div>
-        </div>
-        <h4>Today</h4>
-        <p>One verb. One coach line. One button. The seven dots are your last week.</p>
-      </div>
-
-      <div class="tour-card">
-        <div class="phone-still">
-          <div class="scr" style="background:radial-gradient(120% 90% at 30% 0%, #0E1F18 0%, transparent 60%), var(--ink); padding:46px 18px 18px;">
-            <div style="font-size:18px; font-weight:700; letter-spacing:-0.02em; color:var(--on-ink-1);">Circle</div>
-            <div style="margin-top:14px; padding:10px 14px; border-radius:14px; background:rgba(255,255,255,0.04); border:1px solid var(--hairline); display:flex; align-items:center; gap:10px;">
-              <div style="width:24px; height:24px; border-radius:999px; background:linear-gradient(135deg, var(--lime), var(--mint));"></div>
-              <div style="font-size:11px; color:var(--on-ink-3);">Share something with your circle…</div>
-            </div>
-            <div style="margin-top:10px; padding:12px 14px; border-radius:16px; background:rgba(255,255,255,0.04); border:1px solid var(--hairline);">
-              <div style="font-size:11px; color:var(--on-ink-1); font-weight:700;">Aish <span style="color:var(--on-ink-3); font-weight:400;">· mum · 12m</span></div>
-              <div style="font-size:11px; color:var(--on-ink-1); margin-top:6px; line-height:1.4;">Walked the lake this morning. Forgot how loud the cranes are.</div>
-              <div style="display:flex; align-items:center; gap:10px; margin-top:12px;"><div style="display:flex; align-items:center; gap:5px; padding:4px 10px 4px 8px; border-radius:999px; background:rgba(255,255,255,0.05); border:1px solid var(--hairline);"><span style="font-size:13px; line-height:1;">❤️</span><span style="font-size:14px; line-height:1; opacity:0.7; transform:translateX(-2px);">🔥</span><span style="font-size:10px; font-weight:600; color:var(--on-ink-2); margin-left:2px;">7</span></div></div>
-            </div>
-            <div style="margin-top:8px; padding:12px 14px; border-radius:16px; background:rgba(200,255,60,0.05); border:1px solid color-mix(in srgb, var(--lime) 22%, transparent);">
-              <div style="font-size:11px; color:var(--on-ink-1); font-weight:700;">Aarav, Mira & you <span style="color:var(--on-ink-3); font-weight:400;">· 2h</span></div>
-              <div style="font-size:11px; color:var(--on-ink-1); margin-top:6px; line-height:1.4;">Day 14 of 21 days of breath. Eight to go.</div>
-            </div>
-            <div style="margin-top:8px; padding:12px 14px; border-radius:16px; background:rgba(255,255,255,0.04); border:1px solid var(--hairline);">
-              <div style="font-size:11px; color:var(--on-ink-1); font-weight:700;">Aarav <span style="color:var(--on-ink-3); font-weight:400;">· brother · 5h</span></div>
-              <div style="font-size:11px; color:var(--on-ink-1); margin-top:6px; line-height:1.4;">Week three of the wind-down. Sleeping properly for the first time in years.</div>
-              <div style="display:flex; align-items:center; gap:10px; margin-top:12px;"><div style="display:flex; align-items:center; gap:5px; padding:4px 10px 4px 8px; border-radius:999px; background:rgba(255,255,255,0.05); border:1px solid var(--hairline);"><span style="font-size:13px; line-height:1;">❤️</span><span style="font-size:14px; line-height:1; opacity:0.7; transform:translateX(-2px);">🔥</span><span style="font-size:10px; font-weight:600; color:var(--on-ink-2); margin-left:2px;">7</span></div></div>
-            </div>
-          </div>
-        </div>
-        <h4>Circle</h4>
-        <p>Family and close friends. Three quiet reactions, never hype emojis. No followers, no strangers.</p>
-      </div>
-
-      <div class="tour-card">
-        <div class="phone-still">
-          <div class="scr scr-you">
-            <div class="sent">"I want to feel<br>stronger."</div>
-            <div class="num num">214</div>
-            <div class="num-lbl">days kept</div>
-            <div class="story-lbl">Your story</div>
-            <div class="story">
-              <div class="story-row first"><span class="pin"></span><div><div class="d">Today</div><div class="t">Pulled 60kg for the first time.</div></div></div>
-              <div class="story-row"><span class="pin"></span><div><div class="d">May 14</div><div class="t">Six-month mark — your back hasn't ached in weeks.</div></div></div>
-              <div class="story-row"><span class="pin"></span><div><div class="d">Apr 02</div><div class="t">Started lifting twice a week.</div></div></div>
-            </div>
-          </div>
-        </div>
-        <h4>You</h4>
-        <p>One sentence — your sentence. One number that only goes up. The story of how you got here.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Sunday Recap moment ───────────────────────────────── -->
-<section class="moment">
-  <div class="moment-inner">
-    <div>
-      <div class="section-eyebrow">The Sunday moment</div>
-      <h2 class="section-title">A letter, <em>once a week</em>.</h2>
-      <p class="section-lede">Every Sunday morning, the coach writes you a short letter about the week. Not a dashboard. Not a chart wall. A paragraph in your own words, and one pattern noticed.</p>
-      <p class="section-lede" style="margin-top:18px; font-family:var(--serif); font-style:italic; color:var(--on-ink-1); font-size:22px;">
-        "You said you wanted to feel calmer. This week, you did — on most mornings. The walks before screens were the difference."
+      <p class="hero__sub">
+        Slowly is a wellness app built around one idea&thinsp;: <em>keeping</em>
+        is better than optimising. Workouts and meals that adapt to your worst
+        days, so you never have to quit. No streaks. No scores. No red days.
       </p>
-    </div>
-    <div style="display:flex; justify-content:center;">
-      <div class="phone phone-still" style="position:relative; width:280px; height:580px; border-radius:42px; background:var(--ink); border:1px solid rgba(255,255,255,0.10); box-shadow:0 30px 80px -20px rgba(0,0,0,0.7), 0 12px 30px -10px rgba(0,0,0,0.5); overflow:hidden;">
-        <div style="position:absolute; top:14px; left:50%; transform:translateX(-50%); width:88px; height:26px; border-radius:999px; background:#000; z-index:10;"></div>
-        <div class="scr scr-recap" style="padding:60px 22px 22px;">
-          <div class="ebrow">Sunday · Week 18</div>
-          <div class="head" style="font-size:26px;">A <em>quiet</em> kind<br>of week.</div>
-          <div class="sun-card" style="height:140px;"><div class="sun" style="width:160px; height:160px; bottom:-70px;"></div></div>
-          <p style="font-size:13px;">You said you wanted to feel <em>calmer</em>. This week, you did — on most mornings. The walks before screens were the difference.</p>
-          <div style="margin-top:16px; padding:14px; border-radius:14px; background:rgba(255,255,255,0.04); border:1px solid var(--hairline);">
-            <div style="font-size:9px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--on-ink-3); margin-bottom:8px;">A pattern, noticed</div>
-            <div style="font-size:11px; color:var(--on-ink-1); line-height:1.5;">Mornings you walked, mood landed <span style="color:var(--lime);">7+</span> by evening.</div>
-            <div class="bars" style="margin-top:10px; height:32px;">
-              <div class="bar" style="height:50%"></div>
-              <div class="bar hi" style="height:75%"></div>
-              <div class="bar" style="height:55%"></div>
-              <div class="bar hi" style="height:85%"></div>
-              <div class="bar hi" style="height:75%"></div>
-              <div class="bar" style="height:50%"></div>
-              <div class="bar hi" style="height:90%"></div>
+
+      <div class="hero__cta">
+        <a href="#waitlist" class="btn btn--primary">Join the beta</a>
+        <a href="#engine" class="btn btn--ghost">See how it bends</a>
+      </div>
+
+      <p class="hero__foot">
+        <span class="dot" aria-hidden="true"></span>
+        Beta is free. Premium arrives only when there&rsquo;s something
+        genuinely worth paying for.
+      </p>
+    </section>
+
+    <hr class="rule rule--first" />
+
+    <!-- ───────────────────────────────────────── PROBLEM ─────────────────────── -->
+    <section id="problem" class="prose section">
+      <p class="eyebrow"><span class="marg-num">§ 02</span> &nbsp; The pain we sell against</p>
+
+      <p class="prose__lede">
+        <span class="dropcap">I</span> missed three days of my plan, I feel
+        guilty, and I want to delete the app.
+      </p>
+
+      <p>
+        You&rsquo;ve downloaded a fitness app three times. Maybe more.
+        MyFitnessPal. Cult. HealthifyMe. Apple Fitness. Each one assumed you
+        had forty-five minutes and infinite willpower. Each one painted the
+        screen red the week life got in the way. Each one is now sitting in
+        a folder on the second page of your home screen, quietly judging.
+      </p>
+
+      <p>
+        The category for <em>&ldquo;I quit fitness apps three times and need
+        somewhere kind to land&rdquo;</em> doesn&rsquo;t exist. <em>Fitness</em>
+        is the search term you actually type. Slowly is built inside that
+        search box and rejects almost every assumption that comes with it.
+      </p>
+    </section>
+
+    <hr class="rule" />
+
+    <!-- ───────────────────────────────────────── REFRAME ─────────────────────── -->
+    <section id="reframe" class="reframe section">
+      <p class="eyebrow"><span class="marg-num">§ 03</span> &nbsp; The reframe</p>
+
+      <div class="reframe__grid">
+        <div class="reframe__stat">
+          <span class="reframe__num"><span class="num">3</span> <span class="reframe__unit">hours</span></span>
+          <span class="reframe__eq" aria-hidden="true">=</span>
+          <span class="reframe__pct"><span class="num">1.8%</span></span>
+          <span class="reframe__caption">of your week</span>
+        </div>
+
+        <p class="reframe__body">
+          That&rsquo;s <span class="num">156</span> hours a year. Even two hours
+          a week is <span class="num">104</span> hours a year.
+          <em>You are not behind.</em>
+        </p>
+      </div>
+
+      <p class="reframe__signoff">
+        We&rsquo;re not asking you to change any of this. We&rsquo;re asking
+        what&rsquo;s actually true.
+      </p>
+    </section>
+
+    <hr class="rule" />
+
+    <!-- ──────────────────────────────────── THREE VERSIONS ───────────────────── -->
+    <section id="three-versions" class="section section--exhibit">
+      <p class="eyebrow"><span class="marg-num">§ 04</span> &nbsp; Three versions, always</p>
+
+      <div class="exhibit-row">
+        <div class="prose prose--narrow">
+          <h2 class="h2">
+            Every plan element exists in <em>three sizes</em>. All three count.
+          </h2>
+          <p>
+            <strong>Full</strong> is the day you imagined for yourself.
+            <strong>Small</strong> is the day you actually have.
+            <strong>Rescue</strong> is the day life decided for you. The Rescue
+            attaches to a moment you already have: while the kettle boils,
+            after brushing teeth, in the parking lot before getting out of
+            the car.
+          </p>
+          <p class="prose__quiet">
+            On a busy or low-energy tap, the day&rsquo;s three cards collapse
+            to Rescue only. The decisions get smaller on the days that need
+            them to be smaller.
+          </p>
+        </div>
+
+        <!-- EXHIBIT: Three Versions card -->
+        <figure class="exhibit exhibit--tv" aria-label="Today screen — Three Versions card">
+          <figcaption class="exhibit__cap">
+            <span class="marg">Exhibit&nbsp;A</span>
+            Today &mdash; Movement card
+          </figcaption>
+
+          <div class="card-frame" aria-hidden="true">
+            <div class="card-frame__header">
+              <span class="card-frame__title">Movement</span>
+              <span class="card-frame__meta num">2h 15m left this week</span>
+            </div>
+
+            <div class="versions">
+              <div class="version">
+                <span class="version__name">Full</span>
+                <span class="version__time num">45<span class="version__unit">min</span></span>
+                <span class="version__desc">Strength &middot; lower body</span>
+              </div>
+              <div class="version version--rec" aria-current="true">
+                <span class="version__name">Small <span class="version__badge">suggested</span></span>
+                <span class="version__time num">18<span class="version__unit">min</span></span>
+                <span class="version__desc">Same flow, shorter holds</span>
+              </div>
+              <div class="version">
+                <span class="version__name">Rescue</span>
+                <span class="version__time num">5<span class="version__unit">min</span></span>
+                <span class="version__desc">Spine awakening &middot; <em>while the kettle boils</em></span>
+              </div>
             </div>
           </div>
-        </div>
+        </figure>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ── Founder note + signup ─────────────────────────────── -->
-<section class="cream cream-3-bg">
-  <div class="section">
-    <div class="founder">
-      <div class="founder-photo"></div>
-      <div>
-        <div class="section-eyebrow">From the founder</div>
-        <p class="founder-quote">Health isn't a 90-day challenge. It's your life.<br><br>I built Slowly for the long game — small things, done well, for years. Not a sprint you win. A practice you keep.</p>
-        <div class="founder-sig">
-          <div>
-            <div class="name">Yash Bhardwaj</div>
-            <div class="role">founder</div>
+    <hr class="rule" />
+
+    <!-- ──────────────────────────────────── CAPACITY ENGINE ──────────────────── -->
+    <section id="engine" class="section section--engine">
+      <p class="eyebrow"><span class="marg-num">§ 05</span> &nbsp; The Capacity Engine</p>
+
+      <div class="engine-row">
+        <div class="prose prose--narrow">
+          <h2 class="h2">
+            A quiet system that learns how much your life can hold &mdash;
+            and shrinks the plan when it can&rsquo;t.
+          </h2>
+          <p>
+            Most apps progress the plan because last week was completed.
+            Slowly progresses the plan because <em>your life</em> can hold it.
+            Bad sleep week ? next week stays where it is, or shrinks. Three
+            days off ? the week is auto-recalibrated to half before you even
+            open the app.
+          </p>
+          <p class="prose__quiet">
+            The engine is deterministic. It never writes the plan with AI. It
+            never scores you. It never assigns you a percentage. What you see
+            instead is a single line of trace, once, in onboarding.
+          </p>
+        </div>
+
+        <!-- EXHIBIT: Engine trace -->
+        <figure class="exhibit exhibit--trace" aria-label="Engine trace from onboarding">
+          <figcaption class="exhibit__cap">
+            <span class="marg">Exhibit&nbsp;B</span>
+            Onboarding &mdash; Step 5 trace
+          </figcaption>
+
+          <div class="trace" aria-hidden="true">
+            <div class="trace__prompt">capacity_engine&nbsp;&middot;&nbsp;new&nbsp;plan</div>
+            <div class="trace__lines" id="trace-lines">
+              <span class="trace__line" data-line="Knee flag noted.">Knee flag noted.</span>
+              <span class="trace__line" data-line="Dinner at 9 pm respected.">Dinner at 9 pm respected.</span>
+              <span class="trace__line" data-line="Plan sized to 3 hours / week.">Plan sized to 3 hours / week.</span>
+              <span class="trace__line trace__line--ok" data-line="Ready.">Ready.</span>
+            </div>
+            <div class="trace__caret" aria-hidden="true">&#9608;</div>
           </div>
-          <div class="div"></div>
-          <div class="role">Bengaluru</div>
+        </figure>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <!-- ───────────────────────────── HABIT-STACKING + CARE CALENDAR ─────────── -->
+    <section id="anchor" class="section">
+      <p class="eyebrow"><span class="marg-num">§ 06</span> &nbsp; The habit, anchored</p>
+
+      <div class="anchor-row">
+        <div class="prose prose--narrow">
+          <h2 class="h2">
+            Pick the moment. We&rsquo;ll bring the practice.
+          </h2>
+          <p>
+            On Day&nbsp;1 you pick a small daily moment that already happens:
+            <em>while the kettle boils, after brushing your teeth, in the
+            parking lot before getting out of the car.</em> For fourteen days,
+            one gentle push lands at that moment. Then it phases out. The
+            kettle starts to do the work.
+          </p>
+
+          <ul class="anchor-list">
+            <li><span class="dot dot--sage"></span> while the kettle boils &mdash; <em>3-min spine awakening</em></li>
+            <li><span class="dot dot--honey"></span> after brushing teeth &mdash; <em>5-min wind-down</em></li>
+            <li><span class="dot dot--sky"></span> before opening Instagram &mdash; <em>7-min floor mobility</em></li>
+            <li><span class="dot dot--clay"></span> parking lot, before getting out &mdash; <em>3-min box breath</em></li>
+          </ul>
         </div>
 
-        <div class="signup-card">
-          <div class="h">Get an invite when we open <em>the beta</em>.</div>
-          <div class="sub">First 1,000 users — free for life.</div>
-          <form onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('input').placeholder='You\'re on the list ✓'; this.querySelector('button').textContent='Sent';">
-            <input type="email" placeholder="you@example.com" required>
-            <button type="submit">Reserve</button>
-          </form>
-          <div class="meta">
-            <span>✓ Free during beta</span>
-            <span>✓ No spam</span>
-            <span>✓ India-first launch</span>
+        <!-- EXHIBIT: Care Calendar -->
+        <figure class="exhibit exhibit--cal" aria-label="Care Calendar — a soft icon-per-day grid where blank days are neutral grey, never red.">
+          <figcaption class="exhibit__cap">
+            <span class="marg">Exhibit&nbsp;C</span>
+            Rhythm &mdash; Care Calendar
+          </figcaption>
+
+          <div class="cal" aria-hidden="true">
+            <div class="cal__head">
+              <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+            </div>
+            <div class="cal__grid">
+              <!-- 28 cells, 4 weeks. Mark types: kept (sage), small (honey), rescue (sky), blank, festival -->
+              <span class="cal__cell cal__cell--kept" title="Kept"></span>
+              <span class="cal__cell cal__cell--kept" title="Kept"></span>
+              <span class="cal__cell cal__cell--small" title="Small"></span>
+              <span class="cal__cell cal__cell--blank" title="Blank"></span>
+              <span class="cal__cell cal__cell--rescue" title="Rescue"></span>
+              <span class="cal__cell cal__cell--kept" title="Kept"></span>
+              <span class="cal__cell cal__cell--blank" title="Blank"></span>
+
+              <span class="cal__cell cal__cell--kept" title="Kept"></span>
+              <span class="cal__cell cal__cell--rescue" title="Rescue"></span>
+              <span class="cal__cell cal__cell--kept" title="Kept"></span>
+              <span class="cal__cell cal__cell--small" title="Small"></span>
+              <span class="cal__cell cal__cell--blank" title="Blank"></span>
+              <span class="cal__cell cal__cell--blank" title="Blank"></span>
+              <span class="cal__cell cal__cell--kept" title="Kept"></span>
+
+              <span class="cal__cell cal__cell--festival" title="Festival">★</span>
+              <span class="cal__cell cal__cell--festival" title="Festival">★</span>
+              <span class="cal__cell cal__cell--rescue" title="Rescue"></span>
+              <span class="cal__cell cal__cell--kept" title="Kept"></span>
+              <span class="cal__cell cal__cell--small" title="Small"></span>
+              <span class="cal__cell cal__cell--kept" title="Kept"></span>
+              <span class="cal__cell cal__cell--kept" title="Kept"></span>
+
+              <span class="cal__cell cal__cell--blank" title="Blank"></span>
+              <span class="cal__cell cal__cell--small" title="Small"></span>
+              <span class="cal__cell cal__cell--kept" title="Kept"></span>
+              <span class="cal__cell cal__cell--kept" title="Kept"></span>
+              <span class="cal__cell cal__cell--rescue" title="Rescue"></span>
+              <span class="cal__cell cal__cell--kept" title="Kept" style="--pulse: 1"></span>
+              <span class="cal__cell cal__cell--today" title="Today"></span>
+            </div>
+
+            <div class="cal__legend">
+              <span><span class="dot dot--sage"></span> Kept</span>
+              <span><span class="dot dot--honey"></span> Small</span>
+              <span><span class="dot dot--sky"></span> Rescue</span>
+              <span><span class="dot dot--blank"></span> Blank</span>
+              <span><span class="dot dot--festival">★</span> Festival</span>
+            </div>
+
+            <p class="cal__note">The kettle is starting to do the work.</p>
           </div>
+        </figure>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <!-- ───────────────────────────────────── COMEBACK ────────────────────────── -->
+    <section id="comeback" class="section section--comeback">
+      <p class="eyebrow"><span class="marg-num">§ 07</span> &nbsp; The Comeback Page</p>
+
+      <div class="comeback-row">
+        <figure class="exhibit exhibit--comeback" aria-label="Comeback push notification">
+          <figcaption class="exhibit__cap">
+            <span class="marg">Exhibit&nbsp;D</span>
+            Push &mdash; sent on Day&nbsp;6
+          </figcaption>
+
+          <div class="notif" aria-hidden="true">
+            <div class="notif__bar">
+              <span class="notif__app">
+                <span class="notif__icon"></span>
+                Slowly &middot; <span class="notif__time">now</span>
+              </span>
+            </div>
+            <p class="notif__body">
+              <em>Whenever you&rsquo;re ready &mdash; we picked up where you left off.</em>
+            </p>
+          </div>
+        </figure>
+
+        <div class="prose prose--narrow">
+          <h2 class="h2">
+            Day fifteen, after a bad week.
+          </h2>
+          <p>
+            When you come back after three days away, nothing is red. Nothing
+            is lost. The week is auto-shrunk to fit what you can hold. One
+            soft question waits if you want it. Otherwise: a single button
+            into today.
+          </p>
+          <p class="prose__quiet">
+            We measure <em>returning</em>, not consistency. The metric on the
+            Rhythm tab reads: <span class="num">&ldquo;You returned 4 times this
+            month.&rdquo;</span> No moral weight. No grade. Just a count of
+            the times you chose to come back.
+          </p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ── FAQ ───────────────────────────────────────────────── -->
-<section class="cream faq" id="faq">
-  <div class="section" style="padding-top:0;">
-    <div class="section-eyebrow">Questions</div>
-    <h2 class="section-title">A few <em>quiet</em> answers.</h2>
-    <div class="faq-list">
-      <div class="faq-item open">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">When does Slowly launch?<span class="plus">+</span></button>
-        <div class="faq-a">We're aiming for an India-first beta in 2026. Waitlist members get the first invites — and the first 1,000 stay free for life.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is it really free?<span class="plus">+</span></button>
-        <div class="faq-a">Free during the entire beta. After that, there'll be a quiet ₹/month plan for premium coach features. The core daily practice — the verb, the circle, the recap — will always have a free tier.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Does this replace a real coach or doctor?<span class="plus">+</span></button>
-        <div class="faq-a">No. Slowly is a daily practice tool — it nudges, suggests, and reflects. For medical or clinical concerns, please see a qualified professional. The app will say so, plainly, when relevant.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Why no leaderboards or streaks?<span class="plus">+</span></button>
-        <div class="faq-a">Because they punish missing a day, which is the opposite of a sustainable practice. We track <em>days kept</em> instead — a forgiving lifetime counter that only goes up.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Who's it for?<span class="plus">+</span></button>
-        <div class="faq-a">Indian adults, 25–45, who want a calmer relationship with their body. Especially people who've tried — and quit — other fitness apps. If you've ever deleted MyFitnessPal at 11pm in shame, this is for you.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What about my data?<span class="plus">+</span></button>
-        <div class="faq-a">Your circle, your sentence, your story stay yours. No third-party advertising. No selling data. You can export everything, anytime.</div>
-      </div>
-    </div>
-  </div>
-</section>
+    <hr class="rule rule--bold" />
 
-<!-- ── Footer ────────────────────────────────────────────── -->
-<footer class="foot">
-  <div class="foot-inner">
-    <div>
-      <div class="foot-brand">
-        <svg viewBox="0 0 240 240" fill="none">
-          <defs>
-            <linearGradient id="fg-top" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#FFE5B8"/><stop offset="60%" stop-color="#E8C575"/><stop offset="100%" stop-color="#A8823A"/></linearGradient>
-            <linearGradient id="fg-bot" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7AB820"/><stop offset="60%" stop-color="#C8E85A"/><stop offset="100%" stop-color="#E8FF7A"/></linearGradient>
-          </defs>
-          <path d="M40 100 A80 80 0 0 1 200 100" stroke="url(#fg-top)" stroke-width="22" stroke-linecap="round" fill="none"/>
-          <path d="M40 140 A80 80 0 0 0 200 140" stroke="url(#fg-bot)" stroke-width="22" stroke-linecap="round" fill="none"/>
-        </svg>
-        <span>slowly.</span>
-      </div>
-      <div class="foot-tag">Wellness that doesn't shout. India-first, opening 2026.</div>
-    </div>
-    <div class="foot-col">
-      <h5>Product</h5>
-      <ul>
-        <li><a href="#why">Why Slowly</a></li>
-        <li><a href="#how">How it works</a></li>
-        <li><a href="#tour">The app</a></li>
+    <!-- ────────────────────────────────── THREE MONTHS IN LETTER ─────────────── -->
+    <section id="three-months" class="section letter">
+      <p class="eyebrow"><span class="marg-num">§ 08</span> &nbsp; Day 90 &mdash; an in-app letter</p>
+
+      <p class="letter__intro">
+        Most apps would never name this. Slowly names it deliberately, so
+        you can recalibrate without churning. At Day 90 of your first season,
+        a hand-written card surfaces at the top of Rhythm:
+      </p>
+
+      <blockquote class="letter__body">
+        <p>Three months in.</p>
+        <p>
+          Here&rsquo;s what we hope you&rsquo;ve noticed&thinsp;: a little
+          more energy. Less of that <em>&ldquo;I should be exercising&rdquo;</em>
+          guilt humming in the background. Maybe a workout that didn&rsquo;t
+          feel like work. Maybe a week you weathered without deleting the app.
+        </p>
+        <p>
+          Here&rsquo;s what we want to be honest about&thinsp;: bodies change
+          slowly. Most of the visible stuff &mdash; composition, weight, the
+          way clothes fit &mdash; usually shows up closer to month nine or
+          twelve, if it shows up at all. You&rsquo;ve been showing up at human
+          speed. That&rsquo;s the speed bodies actually respond to.
+        </p>
+        <p>
+          What you&rsquo;ve built in three months is the part that matters.
+          Returning, without shame. A practice that fits your life. The thing
+          nobody else&rsquo;s app could give you, because they were all trying
+          to change you faster than you could afford.
+        </p>
+        <p class="letter__sign"><em>Keep going. Your history is here.</em></p>
+      </blockquote>
+    </section>
+
+    <hr class="rule rule--bold" />
+
+    <!-- ───────────────────────────────────── REMOVED ─────────────────────────── -->
+    <section id="removed" class="section removed">
+      <p class="eyebrow"><span class="marg-num">§ 09</span> &nbsp; What&rsquo;s missing from this app, on purpose</p>
+
+      <h2 class="h2 removed__head">
+        Half the work was deciding what <em>not</em> to ship.
+      </h2>
+
+      <ul class="strikelist" role="list">
+        <li><s>Streaks</s></li>
+        <li><s>Streak freezes</s></li>
+        <li><s>XP</s></li>
+        <li><s>Discipline score</s></li>
+        <li><s>Leaderboards</s></li>
+        <li><s>Daily rings</s></li>
+        <li><s>Red days on the calendar</s></li>
+        <li><s>Before-and-after photos</s></li>
+        <li><s>&ldquo;Six weeks to your best self&rdquo;</s></li>
+        <li><s>An AI coach on your lock screen</s></li>
+        <li><s>A morning weighted check-in</s></li>
+        <li><s>An evening reflection</s></li>
       </ul>
-    </div>
-    <div class="foot-col">
-      <h5>Company</h5>
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Press</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-    <div class="foot-col">
-      <h5>Legal</h5>
-      <ul>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Terms</a></li>
-        <li><a href="#">Data</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="foot-bottom">
-    <span>© 2026 Slowly Labs · slowly.health</span>
-    <span>Built quietly in Bengaluru.</span>
-  </div>
-</footer>
 
-<script>
-  // Nav scroll background
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) nav.classList.add('scrolled');
-    else nav.classList.remove('scrolled');
-  });
+      <p class="removed__signoff">
+        If the user repeatedly fails the plan, the plan failed to understand
+        the user&rsquo;s life. That single belief resolves every product
+        argument we&rsquo;ve ever had.
+      </p>
+    </section>
 
-  // ─── Tweaks panel (vanilla — no Babel needed) ────────────
-  const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-    "headline": "lasts",
-    "accent": "lime"
-  }/*EDITMODE-END*/;
+    <hr class="rule" />
 
-  const HEADLINES = {
-    lasts:    ['Slow training,', '<em>lasting</em> results.'],
-    better:   ['Get better', '<em>slowly</em>. For good.'],
-    rush:     ['The body you want', '<em>isn\'t</em> built in a rush.'],
-    everyday: ['Eat well. Train well.', '<em>Every day.</em> For years.'],
-    shout:    ['Wellness', 'that <em>doesn\'t&nbsp;shout</em>.'],
-  };
-  const ACCENTS = {
-    lime:    { lime: '#C8FF3C', mint: '#9EFFC4' },
-    mint:    { lime: '#9EFFC4', mint: '#C8FF3C' },
-    amber:   { lime: '#FFD27E', mint: '#FFB44C' },
-    rose:    { lime: '#FFB4D6', mint: '#FF8FA3' },
-  };
+    <!-- ───────────────────────────────────── PRINCIPLES ──────────────────────── -->
+    <section id="principles" class="section principles">
+      <p class="eyebrow"><span class="marg-num">§ 10</span> &nbsp; What we believe, ten lines</p>
 
-  const state = { ...TWEAK_DEFAULTS };
+      <ol class="principles__list">
+        <li><span class="principles__n num">01</span> Capacity before intensity.</li>
+        <li><span class="principles__n num">02</span> The budget is sacred.</li>
+        <li><span class="principles__n num">03</span> Three versions, always.</li>
+        <li><span class="principles__n num">04</span> Return is the habit.</li>
+        <li><span class="principles__n num">05</span> No moral scoring.</li>
+        <li><span class="principles__n num">06</span> Subtract first.</li>
+        <li><span class="principles__n num">07</span> Life context wins.</li>
+        <li><span class="principles__n num">08</span> Witness, don&rsquo;t compare.</li>
+        <li><span class="principles__n num">09</span> The coach has a constraint.</li>
+        <li><span class="principles__n num">10</span> Slow is the point.</li>
+      </ol>
+    </section>
 
-  function applyTweaks() {
-    // Headline
-    const [a, b] = HEADLINES[state.headline] || HEADLINES.shout;
-    document.getElementById('hero-h1').innerHTML = `${a}<br>${b}`;
-    // Accent
-    const c = ACCENTS[state.accent] || ACCENTS.lime;
-    document.documentElement.style.setProperty('--lime', c.lime);
-    document.documentElement.style.setProperty('--mint', c.mint);
-  }
-  applyTweaks();
+    <hr class="rule" />
 
-  // Tweaks panel UI
-  function buildPanel() {
-    const root = document.createElement('div');
-    root.id = 'tweaks-root';
-    root.style.cssText = `
-      position: fixed; bottom: 22px; right: 22px; z-index: 200;
-      width: 280px; padding: 18px;
-      background: rgba(10, 14, 12, 0.92);
-      backdrop-filter: blur(20px) saturate(180%);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 18px;
-      color: #F4F8F5;
-      font-family: Inter, sans-serif;
-      box-shadow: 0 20px 60px -20px rgba(0,0,0,0.7);
-      display: none;
-    `;
-    root.innerHTML = `
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
-        <div style="font-size:13px; font-weight:700; letter-spacing:-0.01em;">Tweaks</div>
-        <button id="tweaks-close" style="all:unset; cursor:pointer; width:24px; height:24px; border-radius:999px; background:rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:center; font-size:14px;">×</button>
+    <!-- ───────────────────────────────────── FOUNDER ─────────────────────────── -->
+    <section id="founder" class="section founder">
+      <p class="eyebrow"><span class="marg-num">§ 11</span> &nbsp; From the founder</p>
+
+      <div class="founder-row">
+        <figure class="founder__portrait">
+          <img
+            src="assets/founder-yash.jpg"
+            alt="Yash Bhardwaj, founder of Slowly, photographed in Bangalore."
+            width="360"
+            height="360"
+            loading="lazy"
+          />
+          <figcaption class="founder__cap">
+            <span class="marg">Photographed in Bangalore, 2026</span>
+          </figcaption>
+        </figure>
+
+        <div class="founder__note">
+          <p class="founder__opener">
+            I built Slowly because I&rsquo;d quit five fitness apps.
+          </p>
+
+          <p>
+            Every one of them assumed I had forty-five minutes and a clean
+            kitchen. I had neither. I had a job, dinner at nine, a knee that
+            disagrees with me on Tuesdays, and a quiet promise to myself that
+            I&rsquo;d keep trying. The apps I&rsquo;d downloaded weren&rsquo;t
+            built for that life. They were built for someone who didn&rsquo;t
+            need them.
+          </p>
+
+          <p>
+            Slowly is the app I wished existed the day I gave up on the last
+            one. It assumes you&rsquo;ll miss days. It assumes your week is
+            heavier than you&rsquo;d like. It assumes you eat what your family
+            cooks. It <em>shrinks instead of shaming</em>, and it welcomes
+            you back when life interrupts. That&rsquo;s the whole product.
+          </p>
+
+          <p>
+            If any of this feels like relief &mdash; you&rsquo;re who I built
+            it for.
+          </p>
+
+          <p class="founder__sign">
+            <span class="founder__hand">Yash.</span>
+            <span class="founder__where">Bangalore.</span>
+          </p>
+        </div>
       </div>
-      <div style="font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:8px;">Headline</div>
-      <div id="tw-headline" style="display:flex; flex-direction:column; gap:6px; margin-bottom:18px;"></div>
-      <div style="font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:8px;">Accent</div>
-      <div id="tw-accent" style="display:flex; gap:8px;"></div>
-    `;
-    document.body.appendChild(root);
+    </section>
 
-    const headlineLabels = {
-      lasts: 'Slow training, lasting results',
-      better: 'Get better slowly. For good',
-      rush: 'Not built in a rush',
-      everyday: 'Every day. For years',
-      shout: 'Wellness that doesn\'t shout',
-    };
-    const hRoot = root.querySelector('#tw-headline');
-    Object.entries(headlineLabels).forEach(([k, lbl]) => {
-      const b = document.createElement('button');
-      b.textContent = lbl;
-      b.style.cssText = `all:unset; cursor:pointer; padding:8px 12px; border-radius:10px; font-size:12px; background:${state.headline===k ? 'rgba(200,255,60,0.15)' : 'rgba(255,255,255,0.04)'}; border:1px solid ${state.headline===k ? 'rgba(200,255,60,0.4)' : 'rgba(255,255,255,0.07)'}; color:${state.headline===k ? '#C8FF3C' : 'rgba(255,255,255,0.85)'};`;
-      b.onclick = () => { state.headline = k; applyTweaks(); refreshPanel(); persist(); };
-      hRoot.appendChild(b);
-    });
+    <hr class="rule" />
 
-    const accentColors = {
-      lime: '#C8FF3C', mint: '#9EFFC4', amber: '#FFB44C', rose: '#FF8FA3',
-    };
-    const aRoot = root.querySelector('#tw-accent');
-    Object.entries(accentColors).forEach(([k, color]) => {
-      const b = document.createElement('button');
-      b.style.cssText = `all:unset; cursor:pointer; width:36px; height:36px; border-radius:999px; background:${color}; border:2px solid ${state.accent===k ? '#fff' : 'transparent'}; box-shadow: 0 4px 12px -4px ${color};`;
-      b.onclick = () => { state.accent = k; applyTweaks(); refreshPanel(); persist(); };
-      aRoot.appendChild(b);
-    });
+    <!-- ───────────────────────────────────── WAITLIST CTA ────────────────────── -->
+    <section id="waitlist" class="section waitlist">
+      <p class="eyebrow"><span class="marg-num">§ 12</span> &nbsp; Join the beta</p>
 
-    root.querySelector('#tweaks-close').onclick = () => {
-      root.style.display = 'none';
-      window.parent.postMessage({type: '__edit_mode_dismissed'}, '*');
-    };
-  }
-  function refreshPanel() {
-    const r = document.getElementById('tweaks-root');
-    if (r) { r.remove(); buildPanel(); document.getElementById('tweaks-root').style.display = 'block'; }
-  }
-  function persist() {
-    window.parent.postMessage({type: '__edit_mode_set_keys', edits: state}, '*');
-  }
+      <h2 class="waitlist__head">
+        <em>Health, at human speed.</em>
+      </h2>
 
-  // Tweaks protocol — register listener BEFORE announcing
-  window.addEventListener('message', (e) => {
-    if (!e.data || !e.data.type) return;
-    if (e.data.type === '__activate_edit_mode') {
-      if (!document.getElementById('tweaks-root')) buildPanel();
-      document.getElementById('tweaks-root').style.display = 'block';
-    } else if (e.data.type === '__deactivate_edit_mode') {
-      const r = document.getElementById('tweaks-root');
-      if (r) r.style.display = 'none';
-    }
-  });
-  window.parent.postMessage({type: '__edit_mode_available'}, '*');
-</script>
+      <p class="waitlist__body">
+        Slowly is in private beta. The MVP &mdash; <strong>Today</strong> and
+        <strong>Rhythm</strong> &mdash; ships free during beta. Founding members
+        get <span class="num">&#8377;999/year</span> locked for life when
+        Premium opens. We&rsquo;re building for the first one thousand people
+        who want a practice they can keep.
+      </p>
 
+      <form class="waitlist__form" action="https://formspree.io/f/your-id-here" method="post" novalidate>
+        <label class="sr-only" for="email">Email address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          autocomplete="email"
+          placeholder="you@somewhere.com"
+          class="waitlist__input"
+        />
+        <button type="submit" class="btn btn--primary waitlist__submit">
+          Send me an invite
+        </button>
+      </form>
+
+      <p class="waitlist__fine">
+        We&rsquo;ll write to you once, when there&rsquo;s a build to install.
+        No newsletter. No drip.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ───────────────────────────────────── COLOPHON / FOOTER ─────────────────── -->
+  <footer class="colophon" role="contentinfo">
+    <hr class="rule rule--colo" />
+
+    <div class="colophon__grid">
+      <div class="colophon__brand">
+        <img src="assets/aperture-mark.svg" alt="" width="56" height="56" class="colophon__mark" />
+        <p class="colophon__name">
+          <span class="brand__wordmark brand__wordmark--sm">slowly<span class="brand__period">.</span></span>
+        </p>
+        <p class="colophon__line">Made slowly, in Bangalore.</p>
+      </div>
+
+      <dl class="colophon__set">
+        <dt>Read</dt>
+        <dd><a href="#problem">The pain</a></dd>
+        <dd><a href="#three-versions">Three versions</a></dd>
+        <dd><a href="#engine">The engine</a></dd>
+        <dd><a href="#anchor">The anchor</a></dd>
+        <dd><a href="#three-months">The letter</a></dd>
+        <dd><a href="#founder">From the founder</a></dd>
+      </dl>
+
+      <dl class="colophon__set">
+        <dt>Beta</dt>
+        <dd><a href="#waitlist">Join the waitlist</a></dd>
+        <dd><a href="mailto:hi@slowly.app">hi@slowly.app</a></dd>
+      </dl>
+
+      <dl class="colophon__set">
+        <dt>Set in</dt>
+        <dd>Instrument Serif</dd>
+        <dd>Source Serif 4</dd>
+        <dd>Plus Jakarta Sans</dd>
+        <dd>JetBrains Mono</dd>
+      </dl>
+    </div>
+
+    <p class="colophon__fine">
+      <span class="colophon__copy">&copy; <span class="num">2026</span>&nbsp;&nbsp;SlowlyLabs</span>
+      <span class="colophon__motto"><em>Slow is the point.</em></span>
+    </p>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

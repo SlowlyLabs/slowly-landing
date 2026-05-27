@@ -1,0 +1,23 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" width="560" height="160">
+  <defs>
+    <linearGradient id="wmd-warm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE5B8"></stop>
+      <stop offset="50%" stop-color="#E8C575"></stop>
+      <stop offset="100%" stop-color="#A8823A"></stop>
+    </linearGradient>
+    <linearGradient id="wmd-lime" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7AB820"></stop>
+      <stop offset="50%" stop-color="#C8E85A"></stop>
+      <stop offset="100%" stop-color="#E8FF7A"></stop>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(80 80)" stroke-linecap="round" fill="none">
+    <path d="M -44 -10 A 36 36 0 0 1 26 -28" stroke="url(#wmd-warm)" stroke-width="18"></path>
+    <path d="M 44 10 A 36 36 0 0 1 -26 28" stroke="url(#wmd-lime)" stroke-width="18"></path>
+    <path d="M 26 -28 Q 0 0 -26 28" stroke="#D4B26A" stroke-width="1.5" opacity="0.4"></path>
+  </g>
+
+  <text x="180" y="106" font-family="Instrument Serif, Georgia, serif" font-size="84" font-weight="400" letter-spacing="-2" fill="#F4F8F5">slowly<tspan fill="#E8C575">.</tspan></text>
+</svg>
